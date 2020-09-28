@@ -1,0 +1,16 @@
+{
+    "name": "lzhy/yw7",
+    "description": "快速开发微信模块",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "lzhy",
+            "email": "lzhy@lzhy.me"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Lzhy\\Yw7\\": "src"
+        }
+    }
+}
