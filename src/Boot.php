@@ -29,16 +29,17 @@ class Boot
 
     public function start()
     {
-        $this->config = array_merge(Set::defaultBootConf(),$this->config);
-        $module = Launch::parseRequestModule($this->name);
+        $config = array_merge(Set::defaultBootConf(),$this->config);
+
         $_action = Assist::globalVal('yw7.action_name','op');
+        $module = Launch::parseRequestModule($this->name);
         $do = Assist::gpcVal('do','index');
         $op = Assist::gpcVal($_action,'index');
-        $this->config['module'] = $module;
-        $this->config['do'] = $do;
-        $this->config['op'] = $op;
+        $config['module'] = $module;
+        $config['do'] = $do;
+        $config['op'] = $op;
 
-        Set::setBootGlobalVal($this->config);
-        Launch::on($this->config,$this->arguments);
+        Set::setBootGlobalVal($config);
+        Launch::on($config,$this->arguments);
     }
 }
