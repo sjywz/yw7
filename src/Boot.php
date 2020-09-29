@@ -21,14 +21,15 @@ class Boot
 
     public function setConfig($config = [])
     {
-        $defaultConfig = Set::defaultBootConf();
-        $config = array_merge($defaultConfig,$config);
-        $this->config = $config;
+        if($config && is_array($config)){
+            $this->config = $config;
+        }
         return $this;
     }
 
     public function start()
     {
+        $this->config = array_merge(Set::defaultBootConf(),$this->config);
         $module = Launch::parseRequestModule($this->name);
         $_action = Assist::globalVal('yw7.action_name','op');
         $do = Assist::gpcVal('do','index');
