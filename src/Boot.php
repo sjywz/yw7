@@ -1,9 +1,9 @@
 <?php
 namespace Lzhy\Yw7;
 
-use Lzhy\Yw7\Utils\Assist;
-use Lzhy\Yw7\Utils\Launch;
-use Lzhy\Yw7\Utils\Set;
+use Lzhy\Yw7\Tool\Assist;
+use Lzhy\Yw7\Core\Launch;
+use Lzhy\Yw7\Core\Set;
 
 require __DIR__.'/autoload.php';
 

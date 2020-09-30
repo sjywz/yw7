@@ -1,5 +1,5 @@
 <?php
-namespace Lzhy\Yw7\Utils;
+namespace Lzhy\Yw7\Tool;
 
 use Lzhy\Yw7\Traits\Oauth;
 

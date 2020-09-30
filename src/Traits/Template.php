@@ -1,7 +1,7 @@
 <?php
 namespace Lzhy\Yw7\Traits;
 
-use Lzhy\Yw7\Utils\Assist;
+use Lzhy\Yw7\Tool\Assist;
 
 trait Template
 {
