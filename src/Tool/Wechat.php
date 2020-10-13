@@ -20,7 +20,7 @@ class Wechat
         $state = Assist::gpcVal('state');
         $oauthAccount = Assist::globalVal('oauth_account');
 
-        $lastAuthState = Assist::gpcVal('auth2_redirect_state');
+        $lastAuthState = Assist::gpcVal('yw7_auth2_redirect_state');
         if(empty($code) || ($state && $lastAuthState && $state !== $lastAuthState)){
             $state = random(6);
             $backUrl = Assist::globalVal('siteurl');
