@@ -1,6 +1,8 @@
 <?php
 namespace Lzhy\Yw7\Tool;
 
+use Lzhy\Yw7\Exceptions\InvalidArgumentException;
+
 class Url
 {
     /**
@@ -11,6 +13,12 @@ class Url
      */
     public static function gMobileUrl($do,$query = [])
     {
+        if(empty($do) || !is_string($do)){
+            throw new InvalidArgumentException('param do is must bu string');
+        }
+        if($query && !is_array($query)){
+            throw new InvalidArgumentException('param query must be array');
+        }
         if(strpos($do,'http') === 0){
             return $do;
         }
@@ -30,6 +38,12 @@ class Url
      */
     public static function gWebUrl($do,$query = [])
     {
+        if(empty($do) || !is_string($do)){
+            throw new InvalidArgumentException('param do is must bu string');
+        }
+        if($query && !is_array($query)){
+            throw new InvalidArgumentException('param query must be array');
+        }
         if(strpos($do,'http') === 0){
             return $do;
         }

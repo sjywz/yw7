@@ -12,5 +12,14 @@
         "psr-4": {
             "Lzhy\\Yw7\\": "src"
         }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Lzhy\\Tests\\": "tests"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.4",
+        "mockery/mockery": "^1.4"
     }
 }
