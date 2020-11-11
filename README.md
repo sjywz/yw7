@@ -2,6 +2,7 @@
 
 <p align="center"> 微擎模块开发脚手架 </p>
 
+[![Build Status](https://travis-ci.org/sjywz/yw7.svg?branch=master)](https://travis-ci.org/sjywz/yw7)
 
 ## 安装
 
